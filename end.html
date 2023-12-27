@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+    
+<style>
+body {
+  background-image: url("./images/background3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style> 
+
+<body class="end">
+    <p>
+        Congratulations!<br>
+
+        You complete the 7 outfits out<br>
+
+        of <i>7</i> pieces of clothes
+
+    </p>
+    <a href="javascript:;" class="null">Okay.</a>
+    <script>
+        $(function () {
+            $('p').fadeIn();
+            $('i').html(getQueryString("sum"))
+
+            function getQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            }
+            $('.null').on('click', function () {
+                var length = $('.conright .conbox').find('img').length;
+                var aim = [];
+                for (var i = 0; i < length; i++) {
+                    console.log($('.conright .conbox').find('img').eq(i).attr('name'))
+                    aim.push($('.conright .conbox').find('img').eq(i).attr('name'))
+                }
+                console.log(aim)
+                window.location.href = './end01.html?sum=' + getQueryString("sum") + '&data=' +
+                    getQueryString("data") + "&closet=" + getQueryString("closet");
+            })
+        })
+    </script>
+</body>
+
+</html>

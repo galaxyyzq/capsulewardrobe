@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+    
+<style>
+body {
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+
+<body class="page1">
+    
+        <h1>Welcome!</h1>
+        <p>
+        Minnie the Musical hanger is an interactive hanger designed for supporting capsule wardrobe. This website serves as both an instruction and an exploration tool for "Minnie the Musical Hanger". 
+        </p>
+    
+    <script>
+        $(function () {
+            $('p').fadeIn();
+            $('.page1').on('click', function (e) {
+                if (e.target == this) {
+                    $('.page1').fadeOut(500, function () {
+                        window.location.href = './page1.2.html'
+                    });
+                }
+            })
+        })
+    </script>
+</body>
+    
+    
+
+</html>

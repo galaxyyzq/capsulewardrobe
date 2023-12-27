@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+    
+<style>
+body {
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style> 
+
+<body class="page3">
+    
+    <p class="toptxt">
+        Now you need to decide how many Minnies you want for this spring. The number of Minnies represent the number of clothing you are going to have in this season.
+    </p>
+ 
+    <ul>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+        <li><img src="./images/jz.png" alt=""></li>
+    </ul>
+    <a href="javascript:;" class="null">I want <i>0</i> Minnies</a>
+    <script>
+        $(function () {
+            $('p').fadeIn();
+            $('.page3 li').on('click', function (e) {
+                var index = $(this).index();
+                console.log(index)
+                $('.page3 li').removeClass('show')
+                $('.page3 li:lt(' + (index + 1) + ')').addClass('show')
+                $('.null i').text((index + 1))
+            })
+            /* null click */
+            $('.null').one('click', function () {
+                $(this).addClass('bj')
+                window.location.href = './page4.html?sum=' + $('.null i').text()+'&closet='+getQueryString("closet")
+            })            
+            function getQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            }
+        })
+    </script>
+</body>
+
+</html>

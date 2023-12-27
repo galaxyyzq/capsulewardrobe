@@ -1,0 +1,464 @@
+
+body, html {
+  height: 100%;
+  display: grid;
+}
+
+.page1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.page1 h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page1 p {
+  font-size: 24px;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+#audio {
+  display: none;
+}
+
+.center-me {
+  margin: auto;
+  width: 50%;
+  font-size: 24px;
+  color: #000;
+}
+.page3 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.page3 .toptxt {
+  font-size: 36px;
+  text-align: center;
+  display: block;
+  width: 900px;
+  margin: 50px auto;
+}
+
+.page3 ul {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.page3 ul li {
+  display: inline-block;
+  white-space: nowrap;
+  opacity: 0.5;
+}
+.page3 ul li img {
+  display: block;
+  margin: auto;
+}
+.page3 ul li.show {
+  opacity: 1;
+}
+.page4 {
+  width: 1600px;
+  display: block;
+  margin: auto;
+}
+.page4 .conleft {
+  width: 60%;
+  float: left;
+}
+.page4 .conleft .tit {
+  font-size: 30px;
+  line-height: 60px;
+}
+.page4 .conleft .title {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.page4 .conleft .conbox {
+  padding: 10px;
+}
+.page4 .conleft .conbox .fl {
+  width: 25%;
+  margin: 10px 0;
+  height: 200px;
+}
+.page4 .conright {
+  width: 40%;
+  float: left;
+  position: relative;
+}
+.page4 .conright .null {
+  transform: translate(-50%, 0);
+}
+.page4 .conright .tit {
+  font-size: 30px;
+  line-height: 60px;
+}
+.page4 .conright .conbox {
+  height: 100%;
+  padding-bottom: 120px;
+  overflow: hidden;
+}
+.page4 .conright .conbox .fl {
+  width: 50%;
+  float: left;
+}
+.page4 .conright .conbox .fl a {
+  margin: auto;
+  width: 220px;
+  height: 260px;
+  background: transparent url('../images/hanger_small.png') no-repeat top scroll;
+  background-size: cover;
+  display: block;
+}
+.page4 .conright .conbox .fl a img {
+  padding-top: 100px;
+  width: 160px;
+  margin: auto;
+}
+.page6 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.page6 ul {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.page6 ul li {
+  display: inline-block;
+  white-space: nowrap;
+}
+.page6 ul li a {
+  margin: auto;
+  width: 200px;
+  height: 244px;
+  background: transparent url('../images/putclothes.png') no-repeat top scroll;
+  background-size: cover;
+  display: block;
+}
+.page6 ul li a img {
+  display: block;
+  margin: auto;
+  height: 200px;
+  padding: 120px 0 0 0;
+}
+.page6 ul li.haha {
+  -webkit-animation: haha1 3s linear infinite;
+  animation: haha1 3s linear infinite;
+}
+.page6 ul li.show {
+  opacity: 1;
+}
+.page8 {
+  width: 1600px;
+  display: block;
+  margin: 80px;
+}
+.page8 .conleft {
+  width: 70%;
+  float: left;
+  top: 300px;
+}
+.page8 .conleft .title {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.page8 .conleft .conbox {
+  padding: 10px;
+  padding-top: 10px;
+}
+.page8 .conleft .conbox .fl {
+  margin: 5px 0;
+   width: 200px;
+  height: 240px;
+  background: transparent url('../images/putclothes.png') no-repeat top center;
+  background-size: cover;
+  display: block;   
+}
+.page8 .conleft .conbox img{
+  transform: translate(20%, 50%);
+}
+.page8 .conright {
+  width: 30%;
+  float: right;
+  position: relative;
+}
+.page8 .conright .tit {
+  font-size: 24px;
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+.page8 .conright .conbox {
+  height: 100%;
+  padding-bottom: 140px;
+  overflow: hidden;
+}
+.page8 .conright .conbox .fl {
+  display: block;
+  float: none;
+  margin: 30px auto;
+}
+.page8 .conright .conbox .fl a {
+  margin: auto;
+  width: 243px;
+  height: 243px;
+  background: transparent url('../images/box2.png') no-repeat top center;
+  background-size: cover;
+  display: block;
+}
+.page8 .conright .conbox .fl a img {
+  width: 160px;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.page8 .schedule {
+/*
+  position: absolute;
+  right: 110px;
+  top: 200px;
+*/
+   width: 100px;
+}
+
+.page8 .null {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.null {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 265px;
+  height: 51px;
+  background: transparent url('../images/null1.png') no-repeat top scroll;
+  background-size: 100% auto;
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
+  padding: 0 30px;
+  box-sizing: border-box;
+  color: #333;
+}
+.null i {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+}
+.null:hover {
+  background: transparent url('../images/null.png') no-repeat top scroll;
+  background-size: 100% auto;
+  cursor: pointer;
+}
+.null.bj {
+  background: transparent url('../images/null.png') no-repeat top scroll;
+  background-size: 100% auto;
+}
+
+.end {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.end p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.end i {
+  color: #72a50b;
+  font-size: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+}
+@-webkit-keyframes haha1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(-10deg);
+  }
+  75% {
+    -webkit-transform: rotate(10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+.end01 {
+  width: 1400px;
+  display: block;
+  margin: auto;
+}
+.end01 .conleft {
+  width: 50%;
+  float: left;
+}
+.end01 .conleft .tit {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 80px;
+}
+.end01 .conleft .title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.end01 .conleft .conbox {
+/*  border: 1px solid #000;*/
+  padding: 10px;
+}
+.end01 .conleft .conbox .fl {
+  width: 200px;
+  height: 224px;
+  margin: 5px 0;
+}
+.end01 .conright {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+.end01 .conright .null {
+  transform: translate(-45%, 120%);
+}
+.end01 .conright .tit {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 25px;
+}
+.end01 .conright .descrip {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.end01 .conright .conbox {
+  height: 100%;
+  padding-bottom: 120px;
+  overflow: hidden;
+  padding: 20px;
+}
+.end01 .conright .conbox .fl {
+  width: 100%;
+  float: left;
+}
+
+.end01 .conright .conbox .fl a {
+  margin: auto;
+  width: 65%;
+  height: 210px;
+  background: transparent url('../images/box3.png') no-repeat top center;
+  background-size: cover;
+  display: block;
+}
+
+.end01 .conright .flin{
+  width: 100%;
+  display: inline !important;
+}
+
+.end01 .conright .flin img{
+  padding-top: 10px;
+  width: 20%;
+  display: inline !important;
+}
+
+.num {
+  color: #0f0 !important;
+}
+
+/*
+.end01 .conright .conbox .fl a img {
+  width: 160px;
+  margin: auto;
+  padding-top: 30px;
+}
+*/
+
+.page12 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.page12 .img
+{
+  width: 180px;
+  padding: 10px;
+}
+.page12 .toptxt {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  width: 900px;
+  margin: 50px auto;
+}
+
+
+.page12 .table {
+  
+  text-align: center;
+    display: block;
+  margin: 20px auto;
+}
+
+.page12 a {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+/*  height: calc(100vh - 300px);*/
+  display: block;
+  line-height: calc(100vh - 300px);
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <script src="./jquery-1.8.3.min.js"></script>
+</head>
+    
+<style>
+body {
+  background-image: url("./images/background3.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style> 
+
+<body class="end">
+    <p id="text">
+      placeholder<br>
+    </p>
+    <script>
+        $(function () {
+            $('p').fadeIn();
+            $('i').html(getQueryString("sum"))
+            
+            var sum = getQueryString("sum");
+            var sell = JSON.parse(getQueryString("sell"));
+            
+            let txt = "Congratulations!<br/><br/>";
+            txt += "Through building the capsule wardrobe and send/donate the clothes,<br/><br/> you received <span class=\"num\">";
+            txt += sell[0];
+            txt += "</span> similes from relatives/friends.<br/><br/> Helped people as donating them <span class=\"num\">";
+            txt += sell[1];
+            txt += "</span> pieces of clothes. <br/><br/>Earned <span class=\"num\">";
+            txt += (sell[2] + sell[3]) * 5;
+            txt += "</span> dollars. <span class=\"num\">";
+            txt += sell[3];
+            txt += " </span> of them needs shipping,<br/><br/> which costs estimately <span class=\"num\"> ";
+            txt += sell[3] * 30;
+            txt += "</span>L emission of CO2.";
+            
+            // $("#text").text(txt);
+            // $("#text").html($("#text").html().replace(/\n/g,'<br/>'));
+            $("#text").html(txt);
+
+            function getQueryString(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+            }
+        })
+    </script>
+</body>
+
+</html>

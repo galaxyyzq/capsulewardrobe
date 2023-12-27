@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/base.min.css">
+    <script src="../package/swiper-bundle.min.js"></script>
+</head>
+    
+<style>
+body {
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#zoom {
+  transition: transform .5s; /* Animation */
+}
+
+#zoom:hover {
+  transform: scale(2.5); /* (Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
+
+<body class="page12">
+
+    <p class="toptxt">
+    First, please select among options below:
+    <br>
+    <br>
+    Which closet fits your wardrobe choices most? If none, which closet are you most interested in? 
+    </p>
+    <div class="table">
+        <table><tr>
+            <td><a href="./page2.html?closet=1"><img class="img" id="zoom" src="./images/closet1.jpg" alt=""></a></td>
+            <td><a href="./page2.html?closet=2"><img class="img" id="zoom" src="./images/closet2.jpg" alt=""></a></td>
+            <td><a href="./page2.html?closet=3"><img class="img" id="zoom" src="./images/closet3.jpg" alt=""></a></td>
+            <td><a href="./page2.html?closet=4"><img class="img" id="zoom" src="./images/closet4.jpg" alt=""></a></td>
+            <td><a href="./page2.html?closet=5"><img class="img" id="zoom" src="./images/closet5.jpg" alt=""></a></td>
+            <td><a href="./page2.html?closet=6"><img class="img" id="zoom" src="./images/closet6.jpg" alt=""></a></td>
+            <td><a href="./page2.html?closet=7"><img class="img" id="zoom" src="./images/closet7.jpg" alt=""></a></td>
+            </tr>
+        </table>
+    </div>
+
+
+</body> 
+
+</html>
